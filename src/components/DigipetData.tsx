@@ -6,7 +6,7 @@ interface Props {
 
 function DigipetData({ digipet }: Props) {
   if (digipet) {
-    const digipetEntries = Object.entries(digipet);
+    const digipetEntries = Object.entries(digipet); //array of three arrays [["happiness": 10], ["nutrition": 40],...etc.]
     const digipetStats = digipetEntries.map(([key, val]) => (
       <li key={key}>
         {key}: {val}
@@ -15,7 +15,7 @@ function DigipetData({ digipet }: Props) {
 
     return (
       <>
-        <h2>Your digipet:</h2>
+        <h2>Your digipet: </h2>
         <ul>{digipetStats}</ul>
       </>
     );
