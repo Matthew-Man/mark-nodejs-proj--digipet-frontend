@@ -15,7 +15,7 @@ function App() {
   // console.log(message);
 
   const loadDataFromEndpoint = async (endpoint: `/${string}`) => {
-    const res = await fetch(`https://young-caverns-03424.herokuapp.com/${endpoint}`);
+    const res = await fetch(`https://young-caverns-03424.herokuapp.com${endpoint}`);
     const body = await res.json();
     setMessage(body.message);
     setDigipetStats(body.digipet);
